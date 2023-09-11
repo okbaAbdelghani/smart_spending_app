@@ -496,8 +496,6 @@ class TransactionRow extends StatelessWidget {
   const TransactionRow({super.key, required this.transaction});
   @override
   Widget build(BuildContext context) {
-    String locale = Localizations.localeOf(context).languageCode;
-
     return Container(
       padding: EdgeInsets.all(0.04 * MediaQuery.of(context).size.width),
       margin: EdgeInsets.all(0.04 * MediaQuery.of(context).size.width),
@@ -559,9 +557,9 @@ class TransactionRow extends StatelessWidget {
                 height: 0.03 * MediaQuery.of(context).size.width,
               ),
               Text(
-                  intl.DateFormat.Hm(locale)
+                  intl.DateFormat('h:mma')
                       .format(transaction.date)
-                      .toString(),
+                      .toUpperCase(),
                   style: const TextStyle(
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w500,
