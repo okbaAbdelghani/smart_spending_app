@@ -580,7 +580,7 @@ class ListOfTransactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+            return Column(
       children: [
         Expanded(
             child: ListView.builder(
